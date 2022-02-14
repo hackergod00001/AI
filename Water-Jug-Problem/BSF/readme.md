@@ -3,13 +3,22 @@
 
 
 ### **Problem:**
-         You are given two jugs, a 4-gallon one and a 3-gallon one.
-         Neither has any measuring mark on it.There is a pump that can be used 
-         to fill the jugs with water.How can you get exactly 2 gallons of water 
-         into the 4-gallon jug.
+         You are given two jugs, a 4-gallon one and a 3-gallon one, a pump which has unlimited water 
+         which you can use to fill the jug, and the ground on which water may be poured. Neither jug 
+         has any measuring markings on it. How can you get exactly 2 gallons of water in the 4-gallon jug?
 
 ### **Solution:**
-        The state space for this problem can be described as the set of ordered
+        State Space Representation: we will represent a state of the problem as a tuple (x, y) 
+        where x represents the amount of water in the 4-gallon jug and y represents the amount of water in the 3-gallon jug. 
+        Note that 0 ≤ x ≤ 4, and 0 ≤ y ≤ 3.
+        
+        To solve this we have to make some assumptions not mentioned in the problem. They are:
+         We can fill a jug from the pump.
+         We can pour water out of a jug to the ground.
+         We can pour water from one jug to another.
+         There is no measuring device available.
+        
+        So the state space for this problem can be described as the set of ordered
         pairs of integers (x,y) Where,
         X represents the quantity of  water in the 4-gallon jug  X= 0,1,2,3,4
         Y represents the quantity of water in 3-gallon jug Y=0,1,2,3
