@@ -1,1 +1,1 @@
-# ML-and-AI
+# AI
