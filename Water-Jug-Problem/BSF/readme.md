@@ -38,55 +38,55 @@
   | 9  | (0,2)  | (2,0)  |
   | | | {Pour 2 gallon water from 3 gallon jug into 4 gallon jug}  |
 
-Initialization:
-Start State: (0,0)
-Apply Rule 2:
-(X,Y | Y<3)    ->
-(X,3)
-{Fill 3-gallon jug}
-Now the state is (X,3)
+         Initialization:
+         Start State: (0,0)
+         Apply Rule 2:
+         (X,Y | Y<3)    ->
+         (X,3)
+         {Fill 3-gallon jug}
+         Now the state is (X,3)
 
-Iteration 1:
-Current State: (X,3)
-Apply Rule 7:
-(X,Y | X+Y<=4 ^Y>0)
-(X+Y,0)
-{Pour all water from 3-gallon jug into 4-gallon jug}
-Now the state is (3,0)
+         Iteration 1:
+         Current State: (X,3)
+         Apply Rule 7:
+         (X,Y | X+Y<=4 ^Y>0)
+         (X+Y,0)
+         {Pour all water from 3-gallon jug into 4-gallon jug}
+         Now the state is (3,0)
 
-Iteration 2:
-Current State : (3,0)
-Apply Rule 2:
-(X,Y | Y<3)    ->
-(3,3)
-{Fill 3-gallon jug}
-Now the state is (3,3)
+         Iteration 2:
+         Current State : (3,0)
+         Apply Rule 2:
+         (X,Y | Y<3)    ->
+         (3,3)
+         {Fill 3-gallon jug}
+         Now the state is (3,3)
 
-Iteration 3:
-Current State:(3,3)
-Apply Rule 5:
-(X,Y | X+Y>=4 ^ Y>0)
-(4,Y-(4-X))
-{Pour water from 3-gallon jug into 4-gallon jug until 4-gallon jug is full}
-Now the state is (4,2)
+         Iteration 3:
+         Current State:(3,3)
+         Apply Rule 5:
+         (X,Y | X+Y>=4 ^ Y>0)
+         (4,Y-(4-X))
+         {Pour water from 3-gallon jug into 4-gallon jug until 4-gallon jug is full}
+         Now the state is (4,2)
 
-Iteration 4:
-Current State : (4,2)
-Apply Rule 3:
-(X,Y | X>0)
-(0,Y)
-{Empty 4-gallon jug}
-Now state is (0,2)
+         Iteration 4:
+         Current State : (4,2)
+         Apply Rule 3:
+         (X,Y | X>0)
+         (0,Y)
+         {Empty 4-gallon jug}
+         Now state is (0,2)
 
-Iteration 5:
-Current State : (0,2)
-Apply Rule 9:
-(0,2)
-(2,0)
-{Pour 2 gallon water from 3 gallon jug into 4 gallon jug}
-Now the state is (2,0)
+         Iteration 5:
+         Current State : (0,2)
+         Apply Rule 9:
+         (0,2)
+         (2,0)
+         {Pour 2 gallon water from 3 gallon jug into 4 gallon jug}
+         Now the state is (2,0)
 
-Goal Achieved.
+         Goal Achieved.
 
 ### State Space Tree:
 ![Screenshot 2022-02-14 122347](https://user-images.githubusercontent.com/54675828/153814520-9d93ecd1-7241-4117-8d44-0ad4d708b7a6.png)
